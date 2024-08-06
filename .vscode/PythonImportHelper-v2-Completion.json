@@ -1,0 +1,241 @@
+[
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Form:\n    def draw(self):\n        pass\nclass Square(Form):\n    def draw(self):\n        print(\"Dibuja un cuadrado\")\nclass Circle(Form):\n    def draw(self):\n        print(\"Dibuja un círculo\")\nclass Triangle(Form):",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Square",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Square(Form):\n    def draw(self):\n        print(\"Dibuja un cuadrado\")\nclass Circle(Form):\n    def draw(self):\n        print(\"Dibuja un círculo\")\nclass Triangle(Form):\n    def draw(self):\n        print(\"Dibuja un triángulo\")\n\"\"\"",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Circle",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Circle(Form):\n    def draw(self):\n        print(\"Dibuja un círculo\")\nclass Triangle(Form):\n    def draw(self):\n        print(\"Dibuja un triángulo\")\n\"\"\"\nExtra\n\"\"\"\nclass Operation(ABC):",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Triangle",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Triangle(Form):\n    def draw(self):\n        print(\"Dibuja un triángulo\")\n\"\"\"\nExtra\n\"\"\"\nclass Operation(ABC):\n    @abstractmethod\n    def execute(self, a, b):\n        pass",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Operation",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Operation(ABC):\n    @abstractmethod\n    def execute(self, a, b):\n        pass\nclass Addition(Operation):\n    def execute(self, a, b):\n        return a + b\nclass Substration(Operation):\n    def execute(self, a, b):\n        return a - b",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Addition",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Addition(Operation):\n    def execute(self, a, b):\n        return a + b\nclass Substration(Operation):\n    def execute(self, a, b):\n        return a - b\nclass Multiplication(Operation):\n    def execute(self, a, b):\n        return a * b\nclass Division(Operation):",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Substration",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Substration(Operation):\n    def execute(self, a, b):\n        return a - b\nclass Multiplication(Operation):\n    def execute(self, a, b):\n        return a * b\nclass Division(Operation):\n    def execute(self, a, b):\n        if b == 0:\n            return float('inf')",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Multiplication",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Multiplication(Operation):\n    def execute(self, a, b):\n        return a * b\nclass Division(Operation):\n    def execute(self, a, b):\n        if b == 0:\n            return float('inf')\n        return a / b\nclass Power(Operation):\n    def execute(self, a, b):",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Division",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Division(Operation):\n    def execute(self, a, b):\n        if b == 0:\n            return float('inf')\n        return a / b\nclass Power(Operation):\n    def execute(self, a, b):\n        return a ** b\nclass Calculator:\n    def __init__(self) -> None:",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Power",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Power(Operation):\n    def execute(self, a, b):\n        return a ** b\nclass Calculator:\n    def __init__(self) -> None:\n        self.operations = {}\n    def add_operation(self, name, operation):\n        self.operations[name] = operation\n    def calculate(self, name, a, b):\n        if name not in self.operations:",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "Calculator",
+        "kind": 6,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "class Calculator:\n    def __init__(self) -> None:\n        self.operations = {}\n    def add_operation(self, name, operation):\n        self.operations[name] = operation\n    def calculate(self, name, a, b):\n        if name not in self.operations:\n            raise ValueError(f\"La operación {name} no está soportada.\")\n        return self.operations[name].execute(a, b)\ncalculator = Calculator()",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "calculator",
+        "kind": 5,
+        "importPath": "d",
+        "description": "d",
+        "peekOfCode": "calculator = Calculator()\ncalculator.add_operation(\"addition\", Addition())\ncalculator.add_operation(\"substration\", Substration())\ncalculator.add_operation(\"multiplication\", Multiplication())\ncalculator.add_operation(\"division\", Division())\ncalculator.add_operation(\"power\", Power())\nprint(calculator.calculate(\"addition\", 10, 5))\nprint(calculator.calculate(\"substration\", 10, 5))\nprint(calculator.calculate(\"multiplication\", 10, 5))\nprint(calculator.calculate(\"division\", 10, 0))",
+        "detail": "d",
+        "documentation": {}
+    },
+    {
+        "label": "get_downloads_folder",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_downloads_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Downloads\"))\ndef get_pictures_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Pictures\"))\ndef get_pdf_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Documents\"))\ndef compress_image(image: Image.Image, filename: str, output_folder: Path) -> None:\n    compressed_filename = f\"compressed_{filename}\"\n    image.save(output_folder / compressed_filename, optimize=True, quality=60)\ndef move_file(file_path: Path, destination_folder: Path) -> None:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_pictures_folder",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_pictures_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Pictures\"))\ndef get_pdf_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Documents\"))\ndef compress_image(image: Image.Image, filename: str, output_folder: Path) -> None:\n    compressed_filename = f\"compressed_{filename}\"\n    image.save(output_folder / compressed_filename, optimize=True, quality=60)\ndef move_file(file_path: Path, destination_folder: Path) -> None:\n    destination_folder.mkdir(parents=True, exist_ok=True)\n    file_path.rename(destination_folder / file_path.name)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_pdf_folder",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_pdf_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Documents\"))\ndef compress_image(image: Image.Image, filename: str, output_folder: Path) -> None:\n    compressed_filename = f\"compressed_{filename}\"\n    image.save(output_folder / compressed_filename, optimize=True, quality=60)\ndef move_file(file_path: Path, destination_folder: Path) -> None:\n    destination_folder.mkdir(parents=True, exist_ok=True)\n    file_path.rename(destination_folder / file_path.name)\ndef handle_image_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "compress_image",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def compress_image(image: Image.Image, filename: str, output_folder: Path) -> None:\n    compressed_filename = f\"compressed_{filename}\"\n    image.save(output_folder / compressed_filename, optimize=True, quality=60)\ndef move_file(file_path: Path, destination_folder: Path) -> None:\n    destination_folder.mkdir(parents=True, exist_ok=True)\n    file_path.rename(destination_folder / file_path.name)\ndef handle_image_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension in [\".jpg\", \".jpeg\", \".png\"]:\n        with Image.open(file_path) as image:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "move_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def move_file(file_path: Path, destination_folder: Path) -> None:\n    destination_folder.mkdir(parents=True, exist_ok=True)\n    file_path.rename(destination_folder / file_path.name)\ndef handle_image_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension in [\".jpg\", \".jpeg\", \".png\"]:\n        with Image.open(file_path) as image:\n            compress_image(image, file_path.name, get_pictures_folder())\n        file_path.unlink()\ndef handle_music_file(file_path: Path) -> None:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "handle_image_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def handle_image_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension in [\".jpg\", \".jpeg\", \".png\"]:\n        with Image.open(file_path) as image:\n            compress_image(image, file_path.name, get_pictures_folder())\n        file_path.unlink()\ndef handle_music_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension == \".mp3\":\n        move_file(file_path, get_music_folder())",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "handle_music_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def handle_music_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension == \".mp3\":\n        move_file(file_path, get_music_folder())\ndef get_music_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Music\"))\n# to pdf or docs\ndef handle_pdf_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension == \".pdf\" or extension == \".docs\":",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_music_folder",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_music_folder() -> Path:\n    return Path(os.path.expanduser(\"~/Music\"))\n# to pdf or docs\ndef handle_pdf_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension == \".pdf\" or extension == \".docs\":\n        move_file(file_path, get_pdf_folder())\n        def get_pdf_folder() -> Path:\n            return Path(os.path.expanduser(\"~/Documents\"))\ndef main() -> None:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "handle_pdf_file",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def handle_pdf_file(file_path: Path) -> None:\n    extension = file_path.suffix.lower()\n    if extension == \".pdf\" or extension == \".docs\":\n        move_file(file_path, get_pdf_folder())\n        def get_pdf_folder() -> Path:\n            return Path(os.path.expanduser(\"~/Documents\"))\ndef main() -> None:\n    downloads_folder = get_downloads_folder()\n    for file_path in downloads_folder.iterdir():\n        handle_image_file(file_path)",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main() -> None:\n    downloads_folder = get_downloads_folder()\n    for file_path in downloads_folder.iterdir():\n        handle_image_file(file_path)\n        handle_music_file(file_path)\n        handle_pdf_file(file_path)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    }
+]

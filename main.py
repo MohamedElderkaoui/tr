@@ -11,7 +11,7 @@ def get_pictures_folder() -> Path:
     return Path(os.path.expanduser("~/Pictures"))
 
 def get_pdf_folder() -> Path:
-    return Path(os.path.expanduser("~/Documents"))
+    return Path(os.path.expanduser("~/Documentos"))
 
 
 def compress_image(image: Image.Image, filename: str, output_folder: Path) -> None:
@@ -46,10 +46,10 @@ def get_music_folder() -> Path:
 def handle_pdf_file(file_path: Path) -> None:
     extension = file_path.suffix.lower()
     if extension == ".pdf" or extension == ".docs":
-        move_file(file_path, get_pdf_folder())
+        move_file(file_path, get_pdf_folder())  # noqa: F823
 
-        def get_pdf_folder() -> Path:
-            return Path(os.path.expanduser("~/Documents"))
+def get_pdf_folder() -> Path:
+    return Path(os.path.expanduser("C:\Users\ACER i7 10TH\Documents"))
 
 
 def main() -> None:
